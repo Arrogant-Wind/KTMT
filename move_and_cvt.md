@@ -1,4 +1,4 @@
-## FP Load and Store
+# FP Load and Store
 
 
         # MIPS
@@ -17,7 +17,7 @@
         sdc1 $f0, 0($t4)   #  Mem[ $t4 + 0 ] = $f0;  Mem[ $t4 + 4 ] = $f1
 
 
- ## Move Instructions
+ # Move Instructions
 
         # MIPS
         #
@@ -28,7 +28,7 @@
         mfc1 $t0, $f0
 
 
- ## Data Type Conversion
+ # Data Type Conversion
 
         # Convert between floating-point and integer formats.
         # NOTE: Values don't convert automatically, need to use these insn.
@@ -41,7 +41,7 @@
         #
         cvt.d.w $f0, $f2     # $f0 = convert_from_int_to_double( $f2 )
 
- ## Setting Condition Codes
+ # Setting Condition Codes
 
         # In preparation for a branch, set cond code based on FP comparison.
 
@@ -64,7 +64,7 @@
         # Reachable?
 
 
- ## FP Branches
+ # FP Branches
 
         # MIPS
         #
