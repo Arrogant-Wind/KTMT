@@ -40,9 +40,9 @@
         # cvt.TO.FROM fd, fs
         #
         cvt.d.w $f0, $f2     # $f0 = convert_from_int_to_double( $f2 )
+        
 
  # Setting Condition Codes
-
         # In preparation for a branch, set cond code based on FP comparison.
 
         # MIPS
@@ -62,7 +62,19 @@
         bc1t TARG2          # Branch if $f0 < $f2
         nop
         # Reachable?
-
+        Instruction	Operation
+        c.eq.d	Fs1, Fs2	set floating point coprocessor flag true if equal double  
+        c.eq.s	Fs1, Fs2	set floating point coprocessor flag true if equal float  
+        c.ge.d	Fs1, Fs2	set floating point coprocessor flag true if greater or equal double  
+        c.ge.s	Fs1, Fs2	set floating point coprocessor flag true if greater or equal float  
+        c.gt.d	Fs1, Fs2	set floating point coprocessor flag true if greater than double  
+        c.gt.s	Fs1, Fs2	set floating point coprocessor flag true if greater than float  
+        c.le.d	Fs1, Fs2	set floating point coprocessor flag true if less or equal double  
+        c.le.s	Fs1, Fs2	set floating point coprocessor flag true if less or equal float  
+        c.lt.d	Fs1, Fs2	set floating point coprocessor flag true if less than double  
+        c.lt.s	Fs1, Fs2	set floating point coprocessor flag true if less than float  
+        c.ne.d	Fs1, Fs2	set floating point coprocessor flag true if not equal double
+        c.ne.s	Fs1, Fs2	set floating point coprocessor flag true if not equal float
 
  # FP Branches
 
